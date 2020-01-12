@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFAF0;
+  background-color: #F0FFFF;
   text-align: center;
   font-size: 14pt;
 }
@@ -88,4 +88,5 @@ body {
 .game-winner {
   border: 2px solid;
   border-color: #778899;
+  border-radius: 4px;
 }

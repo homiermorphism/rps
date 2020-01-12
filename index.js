@@ -17,36 +17,36 @@ function playRound(playerChoice) {
   }
   else if (playerChoice.includes('ock')) {
     if (compChoice.includes('pap')) {
-      result = "The computer!";
+      result = "The Computer!";
       document.getElementById("winner").style.color = "red";
       compScore++;
     }
     else if (compChoice.includes('sci')) {
-      result = "The human!"
+      result = "The Human!"
       document.getElementById("winner").style.color = "green";
       playerScore++;
     }
   }
   else if (playerChoice.includes('pap')) {
     if (compChoice.includes('ock')) {
-      result = "The human!";
+      result = "The Human!";
       document.getElementById("winner").style.color = "green";
       playerScore++;
     }
     else if (compChoice.includes('sci')) {
-      result = "The computer!";
+      result = "The Computer!";
       document.getElementById("winner").style.color = "red";
       compScore++;
     }
   }
   else if (playerChoice.includes('sci')) {
     if (compChoice.includes('pap')) {
-      result = "The human!";
+      result = "The Human!";
       document.getElementById("winner").style.color = "green";
       playerScore++;
     }
     else if (compChoice.includes('ock')) {
-      result = "The computer!";
+      result = "The Computer!";
       document.getElementById("winner").style.color = "red";
       compScore++;
     }
@@ -62,16 +62,19 @@ function playRound(playerChoice) {
   console.log("Computer Score: "+compScore);
   console.log("Player Score: "+playerScore);
   let gameResult = document.getElementById("gameResult");
+  let gameResultSaying = document.getElementById("gameResultSaying");
   let nextGame = document.getElementById("nextGame");
   if (compScore + playerScore === 5) {
     alert("Game over!");
     if (compScore > playerScore) {
-      gameResult.innerHTML = "<img src=\"images/comp.png\" width=\"90px\" height=\"90px\">" + "<br>" + "The computer!";
+      gameResult.innerHTML = "The Computer!";
+      gameResultSaying.innerHTML = "Better luck next time.";
       nextGame.innerHTML = "Click one of the buttons to start a new game.";
       console.log("Computer wins");
     }
     else {
-      gameResult.innerHTML = "<img src=\"images/human.png\" width=\"90px\" height=\"90px\">" + "<br>" +"The human!";
+      gameResult.innerHTML = "The Human!";
+      gameResultSaying.innerHTML = "Way to go!";
       nextGame.innerHTML = "Click one of the buttons to start a new game.";
       console.log("Player wins");
     }
