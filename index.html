@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="index.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+  <div> <!-- big div -->
+    <h1>
+      <span class="rock-header">Rock!</span>
+      <span class="paper-header">Paper!</span>
+      <span class="scissors-header">Scissors!</span>
+    </h1>
+
+    <span class="normal-font">Click one of the buttons below to start the game.
+    <br>The game will last five rounds.</span>
+
+    <div class="row"> <!--first row -->
+      <div class="col s3"> <!-- player score -->
+        <span class="fancy-font" style="font-size:150%;text-decoration:underline;">Human Score</span>
+        <br>
+        <span id="playerScore" class="fancy-font" style="font-size:200%">0</span>
+      </div>
+
+      <div class="col s6">
+        <div class="buttons">
+          <button id="rock" class="button" value="rock" onclick="playRound(this.value)"></button>
+          <button id="paper" class="button" value="paper" onclick="playRound(this.value)"></button>
+          <button id="scissors" class="button" value="scissors" onclick="playRound(this.value)"></button>
+        </div>
+        <span class="normal-font">The winner of this round is...</span>
+        <div>
+          <span id="winner" class="result fancy-font"></span>
+          <br>
+          <span id="playerChoice" class="normal-font" style="color:#778899;">You chose: </span>
+          <br>
+          <span id="compChoice" class="normal-font" style="color:#778899;">Computer chose: </span>
+        </div>
+      </div>
+
+      <div class="col s3"> <!-- Computer score -->
+        <span class="fancy-font" style="font-size:150%;text-decoration:underline;">Computer Score</span>
+        <br>
+        <span id="compScore" class="fancy-font" style="font-size:200%">0</span>
+      </div>
+    </div> <!-- end of first row -->
+
+    <div class="row"> <!-- second row -->
+      <div class="col s1"></div>
+      <div class="col s10 game-winner">
+        <span class="normal-font" style="font-size:150%;">This game's winner is...</span>
+        <br>
+        <span id="gameResult" class="fancy-font" style="font-size:200%;"></span>
+        <br>
+        <span id="nextGame" class="normal-font"></span>
+      </div>
+      <div class="col s1"></div>
+    </div> <!-- end of second row -->
+
+  </div> <!-- end of big div -->
+
+  <script src="index.js"></script>
+  </body>
+</html>

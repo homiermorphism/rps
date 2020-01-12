@@ -1,0 +1,91 @@
+body {
+  background-color: #FFFAF0;
+  text-align: center;
+  font-size: 14pt;
+}
+
+.rock-header {
+  color: #FF6347;
+  font-family: 'Satisfy', cursive;
+}
+
+.paper-header {
+  color: #00b3b3;
+  font-family: 'Satisfy', cursive;
+}
+
+.scissors-header {
+  color: #ffca28;
+  font-family: 'Satisfy', cursive;
+}
+
+.fancy-font {
+  font-family: 'Satisfy', cursive;
+}
+
+.normal-font {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.buttons {
+  padding: 50px;
+}
+
+.buttons #rock {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: white;
+  background-image: url('images/rock.jpg');
+  background-repeat: no-repeat;
+  background-size: 99%;
+}
+
+.buttons #paper {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: white;
+  background-image: url('images/paper.jpg');
+  background-repeat: no-repeat;
+  background-size: 99%;
+}
+
+.buttons #scissors {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: white;
+  background-image: url('images/scissors.jpg');
+  background-repeat: no-repeat;
+  background-size: 99%;
+}
+
+.button {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.result {
+  color: #778899;
+  font-size: 175%;
+}
+
+.game-winner {
+  border: 2px solid;
+  border-color: #778899;
+}
