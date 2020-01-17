@@ -18,38 +18,39 @@ function playRound(playerChoice) {
   else if (playerChoice.includes('ock')) {
     if (compChoice.includes('pap')) {
       result = "The Computer!";
-      document.getElementById("winner").style.color = "red";
       compScore++;
     }
     else if (compChoice.includes('sci')) {
       result = "The Human!"
-      document.getElementById("winner").style.color = "green";
       playerScore++;
     }
   }
   else if (playerChoice.includes('pap')) {
     if (compChoice.includes('ock')) {
       result = "The Human!";
-      document.getElementById("winner").style.color = "green";
       playerScore++;
     }
     else if (compChoice.includes('sci')) {
       result = "The Computer!";
-      document.getElementById("winner").style.color = "red";
       compScore++;
     }
   }
   else if (playerChoice.includes('sci')) {
     if (compChoice.includes('pap')) {
       result = "The Human!";
-      document.getElementById("winner").style.color = "green";
       playerScore++;
     }
     else if (compChoice.includes('ock')) {
       result = "The Computer!";
-      document.getElementById("winner").style.color = "red";
       compScore++;
     }
+  }
+
+  if (result === "The Computer!") {
+    document.getElementById("winner").style.color = "red";
+  }
+  else if (result === "The Human!") {
+    document.getElementById("winner").style.color = "green";
   }
 
   document.getElementById("playerScore").innerHTML = playerScore;
