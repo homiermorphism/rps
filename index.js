@@ -59,24 +59,20 @@ function playRound(playerChoice) {
   document.getElementById("playerChoice").innerHTML = "You chose: "+playerChoice;
   document.getElementById("compChoice").innerHTML = "Computer chose: "+compChoice;
 
-  console.log("Computer Score: "+compScore);
-  console.log("Player Score: "+playerScore);
   let gameResult = document.getElementById("gameResult");
   let gameResultSaying = document.getElementById("gameResultSaying");
   let nextGame = document.getElementById("nextGame");
-  if (compScore + playerScore === 5) {
+  if (playerScore === 5 || compScore === 5) {
     alert("Game over!");
     if (compScore > playerScore) {
       gameResult.innerHTML = "The Computer!";
       gameResultSaying.innerHTML = "Better luck next time.";
-      nextGame.innerHTML = "Click one of the buttons to start a new game.";
-      console.log("Computer wins");
+      nextGame.innerHTML = "Make a selection to start a new game.";
     }
     else {
       gameResult.innerHTML = "The Human!";
       gameResultSaying.innerHTML = "Way to go!";
-      nextGame.innerHTML = "Click one of the buttons to start a new game.";
-      console.log("Player wins");
+      nextGame.innerHTML = "Make a selection to start a new game.";
     }
     compScore = 0;
     playerScore = 0;
@@ -86,3 +82,18 @@ function playRound(playerChoice) {
     nextGame.innerHTML = "";
   }
 }
+
+var rock = document.querySelector('#rock');
+rock.addEventListener('click', function() {
+  playRound('rock');
+});
+
+var sci = document.querySelector('#scissors');
+sci.addEventListener('click', function() {
+  playRound('scissors');
+});
+
+var pap = document.querySelector('#paper');
+pap.addEventListener('click', function() {
+  playRound('paper');
+});
