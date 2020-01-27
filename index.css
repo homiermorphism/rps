@@ -1,7 +1,18 @@
 body {
-  background-color: #F5FFFA;
   text-align: center;
   font-size: 14pt;
+}
+
+body::after {
+  content: "";
+  background: url('images/bg-image.png');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .rock-header {
